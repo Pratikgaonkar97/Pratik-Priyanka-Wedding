@@ -1,0 +1,41 @@
+/* Welcome Page Styling */
+body {
+    font-family: 'Great Vibes', cursive;
+    text-align: center;
+    background: url('assets/DSC_3649.JPG') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Center Content */
+.welcome-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Text Styling */
+h1 {
+    font-size: 3.5em;
+    color: #FFD700;
+}
+
+h2 {
+    font-size: 2em;
+    color: #FFA500;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
