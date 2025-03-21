@@ -1,3 +1,9 @@
+function changeMusic() {
+    let selectedMood = document.getElementById("moodSelector").value;
+    document.getElementById("bgMusic").src = `assets/${selectedMood}`;
+    document.getElementById("bgMusic").play();
+}
+
 function generateLoveStory() {
     let name1 = document.getElementById("partner1").value;
     let name2 = document.getElementById("partner2").value;
