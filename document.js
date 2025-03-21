@@ -1,3 +1,15 @@
+function generateLoveStory() {
+    let name1 = document.getElementById("partner1").value;
+    let name2 = document.getElementById("partner2").value;
+    let stories = [
+        `${name1} and ${name2} met at a beautiful garden... their love grew under the moonlight!`,
+        `It was love at first sight when ${name1} bumped into ${name2} at a coffee shop!`,
+        `${name1} wrote a poem, and ${name2} fell in love instantly. A true love story!`
+    ];
+    let randomStory = stories[Math.floor(Math.random() * stories.length)];
+    document.getElementById("loveStory").innerText = `💖 ${randomStory}`;
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     function updateCountdown() {
         const weddingDate = new Date("April 21, 2025 12:37:00").getTime();
