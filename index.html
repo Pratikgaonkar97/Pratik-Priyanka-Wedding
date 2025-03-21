@@ -11,6 +11,18 @@
 </head>
 
 <body>
+
+    <!-- AI Music Player -->
+<select id="moodSelector" onchange="changeMusic()">
+    <option value="happy.mp3">🎉 Happy</option>
+    <option value="romantic.mp3">💖 Romantic</option>
+    <option value="chill.mp3">🌙 Chill</option>
+</select>
+<audio id="bgMusic" autoplay loop>
+    <source src="assets/happy.mp3" type="audio/mp3">
+</audio>
+
+    
     <!-- AI Love Story Generator -->
 <div class="story-section">
     <h3>💖 Generate Your Love Story!</h3>
