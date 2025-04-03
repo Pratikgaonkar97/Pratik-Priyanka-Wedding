@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const weddingDate = new Date("April 21, 2025 12:37:00").getTime();
-
     function updateCountdown() {
+        const weddingDate = new Date("April 21, 2025 12:37:00").getTime();
         const now = new Date().getTime();
         const timeLeft = weddingDate - now;
 
@@ -14,13 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("hours").innerText = hours;
         document.getElementById("minutes").innerText = minutes;
         document.getElementById("seconds").innerText = seconds;
-
-        if (timeLeft < 0) {
-            clearInterval(countdownInterval);
-            document.getElementById("countdown").innerText = "आजचा दिवस!";
-        }
     }
 
+    setInterval(updateCountdown, 1000);
     updateCountdown();
-    const countdownInterval = setInterval(updateCountdown, 1000);
+
+    // Ensure the background image is correctly loaded
+    document.body.style.background = "url('DSC_3663.JPG') no-repeat center center fixed";
+    document.body.style.backgroundSize = "cover";
 });
