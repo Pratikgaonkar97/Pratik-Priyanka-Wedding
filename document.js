@@ -19,6 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCountdown();
 
     // Ensure the background image is correctly loaded
-    document.body.style.background = "url('DSC_3663.JPG') no-repeat center center fixed";
+    document.body.style.background = "url('_DSC8749.jpg') no-repeat center center fixed";
     document.body.style.backgroundSize = "cover";
 });
