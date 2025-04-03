@@ -1,25 +1,53 @@
-document.addEventListener("DOMContentLoaded", function () {
-    function updateCountdown() {
-        const weddingDate = new Date("April 21, 2025 12:37:00").getTime();
-        const now = new Date().getTime();
-        const timeDiff = weddingDate - now;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyanka & Pratik's Wedding Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="body.css">
+    <script src="document.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="fade-in">प्रियंका आणि प्रतिक</h1>
+        
+        <!-- Countdown Timer -->
+        <div id="countdown">
+            <span id="days"></span> दिवस
+            <span id="hours"></span> तास
+            <span id="minutes"></span> मिनिटे
+            <span id="seconds"></span> सेकंद
+        </div>
 
-        if (timeDiff <= 0) {
-            document.getElementById("countdown").innerHTML = "आजचा मोठा दिवस आहे! 🎉";
-            return;
-        }
-
-        const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-
-        document.getElementById("days").textContent = days;
-        document.getElementById("hours").textContent = hours;
-        document.getElementById("minutes").textContent = minutes;
-        document.getElementById("seconds").textContent = seconds;
-    }
-
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-});
+        <!-- Event Sections -->
+        <div class="event">
+            <h3>💍 साखरपुडा समारंभ</h3>
+            <p><strong>तारीख:</strong> १८ एप्रिल २०२५ | <strong>वेळ:</strong> १२:०० PM</p>
+            <p><strong>स्थळ:</strong> मु. पो. पिरकोन-आवरे, ता. उरण, जि. रायगड यांची सुकन्या</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d719.046166712851!2d73.01048790387395!3d18.846481138894863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7dfab7c767bcf%3A0x28206374a18ce56c!2sjare%20mata%20mander!5e1!3m2!1sen!2sin!4v1743685194677!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+        <div class="event">
+            <h3>💛 हळदी समारंभ</h3>
+            <p><strong>तारीख:</strong> १८ एप्रिल २०२५ | <strong>वेळ:</strong> १२:०० PM</p>
+            <p><strong>स्थळ:</strong> मु. पो. पिरकोन-आवरे, ता. उरण, जि. रायगड यांची सुकन्या</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d719.046166712851!2d73.01048790387395!3d18.846481138894863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7dfab7c767bcf%3A0x28206374a18ce56c!2sjare%20mata%20mander!5e1!3m2!1sen!2sin!4v1743685194677!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+        <div class="event">
+            <h3>💒 लग्न समारंभ</h3>
+            <p><strong>तारीख:</strong> २१ एप्रिल २०२५</p>
+            <p><strong>स्थळ:</strong> मोरया बँक्वेट A/C हॉल</p>
+            <p><strong>पत्ता:</strong> खोपटा कॉन्टिनेंटल बस स्टॉप जवळ, खोपटा ब्रिज जवळ, उरण, नवी मुंबई, महाराष्ट्र ४१०२०६</p>
+            <p><strong>वेळ:</strong> १२:३७ PM</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1208.0944619067677!2d72.99933705718968!3d18.872646270883187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7dc0409fbcf95%3A0x6c59681d2fa9bf4b!2sShivdurga%20Wearhouse%20And%20Transportation!5e1!3m2!1sen!2sin!4v1742303982459!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+        <div class="event">
+            <h3>🍛 स्नेहभोजन</h3>
+            <p><strong>वेळ:</strong> १:०० - ३:०० </p>
+        </div>
+    </div>
+</body>
+</html>
