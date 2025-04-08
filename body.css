@@ -1,17 +1,14 @@
-.hero-section {
-    background-image: url('_DSC8749.jpg'); /* adjust path as per actual location */
+body {
+    background: url('_DSC8749.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="%23ff4081" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>'), auto;
 }
-
 
 body::before {
     content: '';
@@ -133,10 +130,36 @@ h1.name-color {
 }
 .timeline-item iframe {
     width: 100%;
-    height: 250px;
+    height: 150px; /* Reduced from 250px to make maps smaller */
     border: 0;
     border-radius: 10px;
     margin-top: 10px;
+}
+
+/* Event-specific Background Images */
+.engagement-bg {
+    background: url('https://t4.ftcdn.net/jpg/02/08/99/43/240_F_208994387_yxpDPiRsonvL3kzBOAZQydvhrPh1BDo0.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff; /* White text for contrast */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Shadow for readability */
+}
+.haldi-bg {
+    background: url('https://t4.ftcdn.net/jpg/02/56/34/39/240_F_256343957_CCygJ0Lx5Lgu1w0ELg67uTarTRdU7qn9.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff; /* White text for contrast */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Shadow for readability */
+}
+.wedding-bg {
+    background: url('https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=600') no-repeat center center;
+    background-size: cover;
+    color: #fff; /* White text for contrast */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Shadow for readability */
+}
+.reception-bg {
+    background: url('https://t3.ftcdn.net/jpg/05/70/04/02/240_F_570040265_4xitPhVoc637RBqvEDHCX0BJ1mSpqtgo.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff; /* White text for contrast */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Shadow for readability */
 }
 
 /* Animations */
