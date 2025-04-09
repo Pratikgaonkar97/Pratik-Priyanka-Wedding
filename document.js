@@ -10,14 +10,18 @@ document.addEventListener("DOMContentLoaded", function () {
         const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
+        const formattedHours = hours.toString().padStart(2, '0');
+        const formattedMinutes = minutes.toString().padStart(2, '0');
+        const formattedSeconds = seconds.toString().padStart(2, '0');
+
         document.getElementById("days").innerText = days;
-        document.getElementById("hours").innerText = hours;
-        document.getElementById("minutes").innerText = minutes;
-        document.getElementById("seconds").innerText = seconds;
+        document.getElementById("hours").innerText = formattedHours;
+        document.getElementById("minutes").innerText = formattedMinutes;
+        document.getElementById("seconds").innerText = formattedSeconds;
 
         if (timeLeft <= 0) {
             const lang = document.querySelector(".lang-switcher button.active")?.getAttribute("data-lang") || "mr";
-            document.getElementById("countdown").innerText = lang === "mr" ? "आज आमचा लग्नाचा दिवस आहे!" : "Today is our wedding day!";
+            document.getElementById("countdown").innerHTML = lang === "mr" ? "आज आमचा लग्नाचा दिवस आहे!" : "Today is our wedding day!";
             launchConfetti();
         }
     }
@@ -56,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const langButtons = document.querySelectorAll(".lang-switcher button");
     const translations = {
         mr: {
+            invitation: "आमच्यासोबत आनंद, हास्य आणि प्रेमाच्या दिवसासाठी सामील व्हा कारण आम्ही लग्न साजरे करतो",
             title: "प्रियंका आणि प्रतिक",
             days: "दिवस",
             hours: "तास",
@@ -64,14 +69,15 @@ document.addEventListener("DOMContentLoaded", function () {
             musicOn: "संगीत चालू",
             musicOff: "संगीत थांबवा",
             timeline: [
-                { title: "साखरपुडा समारंभ", date: "१८ एप्रिल २०२५", time: "१२:०० PM", location: "मु. पो. पिरकोन-आवरे, ता. उरण, जि. रायगड", address: "" },
-                { title: "हळदी समारंभ", date: "२० एप्रिल २०२५", time: "५:०० PM", location: "मु. पो. पिरकोन-आवरे, ता. उरण, जि. रायगड", address: "" },
+                { title: "साखरपुडा समारंभ", date: "१८ एप्रिल २०२५", time: "१२:०० PM", location: "मु. पो. पिरकोन-आवरे, ता. उरण, जि. रायगड यांची सुकन्या", address: "" },
+                { title: "हळदी समारंभ", date: "२० एप्रिल २०२५", time: "५:०० PM", location: "मु. पो. पिरकोन-आवरे, ता. उरण, जि. रायगड यांची सुकन्या", address: "" },
                 { title: "लग्न समारंभ", date: "२१ एप्रिल २०२५", time: "१२:३७ PM", location: "मोरया बँक्वेट A/C हॉल", address: "खोपटा कॉन्टिनेंटल बस स्टॉप जवळ, खोपटा ब्रिज जवळ, उरण, नवी मुंबई, महाराष्ट्र ४१०२०६" },
                 { title: "स्नेहभोजन", date: "२१ एप्रिल २०२५", time: "१:०० - ३:०० PM", location: "मोरया बँक्वेट A/C हॉल", address: "" }
             ],
             labels: { date: "तारीख", time: "वेळ", location: "स्थळ", address: "पत्ता" }
         },
         en: {
+            invitation: "Join us for a day of joy, laughter, and love as we celebrate the marriage of",
             title: "Priyanka & Pratik",
             days: "Days",
             hours: "Hours",
@@ -95,12 +101,15 @@ document.addEventListener("DOMContentLoaded", function () {
             langButtons.forEach(b => b.classList.remove("active"));
             btn.classList.add("active");
 
+            // Update Invitation Message
+            document.querySelector(".invitation-message").textContent = translations[lang].invitation;
+
             // Update Title
             document.querySelector(".name-color").textContent = translations[lang].title;
 
             // Update Countdown Labels
-            document.querySelectorAll(".countdown-style span").forEach((span, i) => {
-                span.nextSibling.textContent = " " + Object.values(translations[lang])[i + 1];
+            document.querySelectorAll(".countdown-label span").forEach((span, i) => {
+                span.textContent = Object.values(translations[lang])[i + 2];
             });
 
             // Update Music Button
@@ -124,7 +133,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Initialize Timeline with Marathi (default)
+    // Initialize with Marathi (default)
+    document.querySelector(".invitation-message").textContent = translations.mr.invitation;
+    document.querySelector(".name-color").textContent = translations.mr.title;
     document.querySelectorAll(".timeline-item").forEach((item, i) => {
         const event = translations.mr.timeline[i];
         const address = event.address ? `<p><strong>${translations.mr.labels.address}:</strong> ${event.address}</p>` : "";
