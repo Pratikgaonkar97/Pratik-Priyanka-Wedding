@@ -33,6 +33,66 @@ body::before {
     animation: fadeIn 1.5s ease-in-out;
 }
 
+/* Language Switcher */
+.lang-switcher {
+    margin-bottom: 20px;
+}
+
+.lang-switcher button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff; /* White text for contrast */
+    background: linear-gradient(45deg, #ff4081, #ff9800); /* Vibrant gradient */
+    border: none;
+    border-radius: 25px; /* Rounded edges */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.lang-switcher button:hover {
+    background: linear-gradient(45deg, #ff9800, #ff4081); /* Reverse gradient on hover */
+    transform: scale(1.05); /* Slight scale-up effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+.lang-switcher button.active {
+    background: linear-gradient(45deg, #8e24aa, #ff4081); /* Unique gradient for active state */
+    transform: scale(1.1); /* Slightly larger when active */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow for emphasis */
+}
+
+/* Title Background */
+.title-bg {
+    position: relative;
+    background: url('https://t4.ftcdn.net/jpg/08/60/86/51/240_F_860865161_nmYeVfFOWeYhVGvYnJtJMcrLq0xMnL0e.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.invitation-text {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.invitation-message {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+}
+
 h1.name-color {
     font-family: 'Great Vibes', cursive;
     font-size: 3.5rem;
@@ -40,45 +100,69 @@ h1.name-color {
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    margin-bottom: 25px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 10px 0 0 0;
     animation: gradientShift 5s ease infinite;
 }
 
+/* Countdown Style */
 .countdown-style {
-    font-size: 1.8rem;
-    font-weight: 600;
-    background: rgba(255, 255, 255, 0.95);
-    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('https://www.transparenttextures.com/patterns/paper-1.png') no-repeat center center;
+    background-size: cover;
+    padding: 10px 20px;
     border-radius: 15px;
     margin-bottom: 35px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
-/* Language Switcher */
-.lang-switcher {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-.lang-switcher button {
-    padding: 5px 10px;
+.countdown-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0 5px;
-    background: #ff4081;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
-.lang-switcher button:hover {
-    background: #ff9800;
+
+.countdown-box {
+    width: 60px;
+    height: 60px;
+    background: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-box span {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #355e3b;
+}
+
+.colon {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #355e3b;
+    margin: 0 5px;
+}
+
+.countdown-label {
+    font-size: 0.9rem;
+    color: #6b705c;
+    font-weight: 400;
+    text-align: center;
 }
 
 /* Music Toggle */
 .music-toggle {
     margin: 20px 0;
 }
+
 #music-btn {
     padding: 10px 20px;
     background: #ff4081;
@@ -87,6 +171,7 @@ h1.name-color {
     border-radius: 10px;
     cursor: pointer;
 }
+
 #music-btn:hover {
     background: #ff9800;
 }
@@ -96,6 +181,7 @@ h1.name-color {
     position: relative;
     margin: 40px 0;
 }
+
 .timeline-item {
     background: rgba(255, 255, 255, 0.95);
     padding: 20px;
@@ -105,9 +191,11 @@ h1.name-color {
     position: relative;
     transition: transform 0.3s ease;
 }
+
 .timeline-item:hover {
     transform: scale(1.03);
 }
+
 .timeline-item::before {
     content: '';
     position: absolute;
@@ -119,6 +207,7 @@ h1.name-color {
     top: 50%;
     transform: translateY(-50%);
 }
+
 .timeline-item::after {
     content: '';
     position: absolute;
@@ -128,9 +217,10 @@ h1.name-color {
     left: -20px;
     top: 0;
 }
+
 .timeline-item iframe {
     width: 100%;
-    height: 150px; /* Reduced from 250px to make maps smaller */
+    height: 100px;
     border: 0;
     border-radius: 10px;
     margin-top: 10px;
@@ -140,26 +230,29 @@ h1.name-color {
 .engagement-bg {
     background: url('https://t4.ftcdn.net/jpg/02/08/99/43/240_F_208994387_yxpDPiRsonvL3kzBOAZQydvhrPh1BDo0.jpg') no-repeat center center;
     background-size: cover;
-    color: #fff; /* White text for contrast */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Shadow for readability */
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
+
 .haldi-bg {
     background: url('https://t4.ftcdn.net/jpg/02/56/34/39/240_F_256343957_CCygJ0Lx5Lgu1w0ELg67uTarTRdU7qn9.jpg') no-repeat center center;
     background-size: cover;
-    color: #fff; /* White text for contrast */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Shadow for readability */
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
+
 .wedding-bg {
     background: url('https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=600') no-repeat center center;
     background-size: cover;
-    color: #fff; /* White text for contrast */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Shadow for readability */
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
+
 .reception-bg {
     background: url('https://t3.ftcdn.net/jpg/05/70/04/02/240_F_570040265_4xitPhVoc637RBqvEDHCX0BJ1mSpqtgo.jpg') no-repeat center center;
     background-size: cover;
-    color: #fff; /* White text for contrast */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Shadow for readability */
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 /* Animations */
@@ -168,6 +261,7 @@ h1.name-color {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
