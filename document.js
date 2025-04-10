@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 { title: "लग्न समारंभ", date: "२१ एप्रिल २०२५", time: "१२:३७ PM", location: "मोरया बँक्वेट हॉल", address: "खोपटा कॉन्टिनेंटल बस स्टॉप जवळ, खोपटा ब्रिज जवळ, उरण, नवी मुंबई, महाराष्ट्र ४१०२०६" },
                 { title: "स्वागत समारंभ आणि स्नेह भोजन", date: "२१ एप्रिल २०२५", time: "१:०० - ३:०० PM", location: "मोरया बँक्वेट हॉल", address: "" }
             ],
-            labels: { date: "तारीख", time: "वेळ", location: "स्थळ", address: "पत्ता" }
+            labels: { date: "तारीख", time: "वेळ", location: "पत्ता", address: "पत्ता" }
         },
         en: {
             invitation: "Marriage! A bond, a duty, a new relationship, a realization. A newly tied knot! A dream… seen by two eyes, a longing… felt by two hearts, a calling… for a lifetime. You are cordially invited to be a part of this auspicious moment and bless the couple.",
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 { title: "Wedding Ceremony", date: "21 April 2025", time: "12:37 PM", location: "Morya Banquet Hall", address: "Near Khopta Continental Bus Stop, Near Khopta Bridge, Uran, Navi Mumbai, Maharashtra 410206" },
                 { title: "Reception", date: "21 April 2025", time: "1:00 - 3:00 PM", location: "Morya Banquet Hall", address: "" }
             ],
-            labels: { date: "Date", time: "Time", location: "Venue", address: "Address" }
+            labels: { date: "Date", time: "Time", location: "Address", address: "Address" }
         }
     };
 
