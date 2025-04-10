@@ -44,25 +44,25 @@ body::before {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
     font-weight: 600;
-    color: #ffffff; /* White text for contrast */
-    background: linear-gradient(45deg, #ff4081, #ff9800); /* Vibrant gradient */
+    color: #ffffff;
+    background: linear-gradient(45deg, #ff4081, #ff9800);
     border: none;
-    border-radius: 25px; /* Rounded edges */
+    border-radius: 25px;
     cursor: pointer;
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .lang-switcher button:hover {
-    background: linear-gradient(45deg, #ff9800, #ff4081); /* Reverse gradient on hover */
-    transform: scale(1.05); /* Slight scale-up effect */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    background: linear-gradient(45deg, #ff9800, #ff4081);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 .lang-switcher button.active {
-    background: linear-gradient(45deg, #8e24aa, #ff4081); /* Unique gradient for active state */
-    transform: scale(1.1); /* Slightly larger when active */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow for emphasis */
+    background: linear-gradient(45deg, #8e24aa, #ff4081);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Title Background */
@@ -78,31 +78,33 @@ body::before {
 
 .invitation-text {
     background: rgba(0, 0, 0, 0.5);
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
     display: inline-block;
+    max-width: 80%;
 }
 
 .invitation-message {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     margin: 0;
     padding: 0;
-    line-height: 1.4;
+    line-height: 1.5;
+    text-align: center;
 }
 
 h1.name-color {
     font-family: 'Great Vibes', cursive;
     font-size: 3.5rem;
-    background: linear-gradient(90deg, #ff4081, #ff9800, #8e24aa, #ff4081);
-    background-size: 200% 200%;
+    background: linear-gradient(90deg, #ffd700, #ff69b4, #00ffff, #ffd700); /* Gold, Hot Pink, Cyan, Gold */
+    background-size: 300% 300%; /* Larger size for smoother animation */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.8); /* Enhanced white glow, no black shadow */
     margin: 10px 0 0 0;
-    animation: gradientShift 5s ease infinite;
+    animation: gradientShift 6s ease infinite; /* Slower animation */
 }
 
 /* Countdown Style */
@@ -156,24 +158,6 @@ h1.name-color {
     color: #6b705c;
     font-weight: 400;
     text-align: center;
-}
-
-/* Music Toggle */
-.music-toggle {
-    margin: 20px 0;
-}
-
-#music-btn {
-    padding: 10px 20px;
-    background: #ff4081;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-#music-btn:hover {
-    background: #ff9800;
 }
 
 /* Timeline */
