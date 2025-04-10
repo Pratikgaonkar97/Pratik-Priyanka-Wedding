@@ -43,48 +43,31 @@ document.addEventListener("DOMContentLoaded", function () {
         };
     }
 
-    // Music Toggle
-    const musicBtn = document.getElementById("music-btn");
-    const audio = document.getElementById("background-music");
-    musicBtn.addEventListener("click", () => {
-        if (audio.paused) {
-            audio.play();
-            musicBtn.innerHTML = '<i class="fas fa-pause"></i> ' + (document.querySelector(".lang-switcher button.active")?.getAttribute("data-lang") === "en" ? "Pause Music" : "संगीत थांबवा");
-        } else {
-            audio.pause();
-            musicBtn.innerHTML = '<i class="fas fa-music"></i> ' + (document.querySelector(".lang-switcher button.active")?.getAttribute("data-lang") === "en" ? "Play Music" : "संगीत चालू");
-        }
-    });
-
     // Language Switcher
     const langButtons = document.querySelectorAll(".lang-switcher button");
     const translations = {
         mr: {
-            invitation: "आमच्यासोबत आनंद, हास्य आणि प्रेमाच्या दिवसासाठी सामील व्हा कारण आम्ही लग्न साजरे करतो",
+            invitation: "विवाह! एक बंधन, एक कर्तव्य, एक नवं नातं, एक जाणीव. नव्याने जुळणारी एक रेशीम गाठ! एक स्वप्न… दोन डोळ्यांचं, एक हुरहूर… दोन मनांची, एक चाहूल… सात जन्मांची, अशा मंगल क्षणाचे साक्षीदार होण्यासाठी आपणांस विवाहाचे अगत्याचे आमंत्रण",
             title: "प्रियंका आणि प्रतिक",
             days: "दिवस",
             hours: "तास",
             minutes: "मिनिटे",
             seconds: "सेकंद",
-            musicOn: "संगीत चालू",
-            musicOff: "संगीत थांबवा",
             timeline: [
-                { title: "साखरपुडा समारंभ", date: "१८ एप्रिल २०२५", time: "१२:०० PM", location: "मु. पो. पिरकोन-आवरे, ता. उरण, जि. रायगड यांची सुकन्या", address: "" },
-                { title: "हळदी समारंभ", date: "२० एप्रिल २०२५", time: "५:०० PM", location: "मु. पो. पिरकोन-आवरे, ता. उरण, जि. रायगड यांची सुकन्या", address: "" },
+                { title: "साखरपुडा समारंभ", date: "१८ एप्रिल २०२५", time: "१२:०० PM", location: "मु. पो. पिरकोन-आवरे, ता. उरण, जि. रायगड", address: "" },
+                { title: "हळदी समारंभ", date: "२० एप्रिल २०२५", time: "५:०० PM", location: "मु. पो. पिरकोन-आवरे, ता. उरण, जि. रायगड", address: "" },
                 { title: "लग्न समारंभ", date: "२१ एप्रिल २०२५", time: "१२:३७ PM", location: "मोरया बँक्वेट A/C हॉल", address: "खोपटा कॉन्टिनेंटल बस स्टॉप जवळ, खोपटा ब्रिज जवळ, उरण, नवी मुंबई, महाराष्ट्र ४१०२०६" },
                 { title: "स्नेहभोजन", date: "२१ एप्रिल २०२५", time: "१:०० - ३:०० PM", location: "मोरया बँक्वेट A/C हॉल", address: "" }
             ],
             labels: { date: "तारीख", time: "वेळ", location: "स्थळ", address: "पत्ता" }
         },
         en: {
-            invitation: "Join us for a day of joy, laughter, and love as we celebrate the marriage of",
+            invitation: "Marriage! A bond, a duty, a new relationship, a realization. A newly tied knot! A dream… seen by two eyes, a longing… felt by two hearts, a calling… for a lifetime. You are cordially invited to be a part of this auspicious moment and bless the couple.",
             title: "Priyanka & Pratik",
             days: "Days",
             hours: "Hours",
             minutes: "Minutes",
             seconds: "Seconds",
-            musicOn: "Play Music",
-            musicOff: "Pause Music",
             timeline: [
                 { title: "Engagement Ceremony", date: "18 April 2025", time: "12:00 PM", location: "Pirakon-Aware, Uran, Raigad District", address: "" },
                 { title: "Haldi Ceremony", date: "20 April 2025", time: "5:00 PM", location: "Pirakon-Aware, Uran, Raigad District", address: "" },
@@ -111,11 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
             document.querySelectorAll(".countdown-label span").forEach((span, i) => {
                 span.textContent = Object.values(translations[lang])[i + 2];
             });
-
-            // Update Music Button
-            musicBtn.innerHTML = audio.paused
-                ? `<i class="fas fa-music"></i> ${translations[lang].musicOn}`
-                : `<i class="fas fa-pause"></i> ${translations[lang].musicOff}`;
 
             // Update Timeline
             document.querySelectorAll(".timeline-item").forEach((item, i) => {
