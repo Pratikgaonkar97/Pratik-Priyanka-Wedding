@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
             labels: { date: "तारीख", time: "वेळ", location: "पत्ता", address: "पत्ता" }
         },
         en: {
-            invitation: "Marriage! A bond, a duty, a new relationship, a realization. A newly tied knot! A dream… seen by two eyes, a longing… felt by two hearts, a calling… for a lifetime. You are cordially invited to be a part of this auspicious moment and bless the couple.",
+            invitation: "Marriage! A bond, a duty, a new relationship, a realization. A newly tied knot! A dream seen by two eyes, a longing felt by two hearts, a calling for a lifetime. You are cordially invited to be a part of this auspicious moment and bless the couple.",
             title: "Priyanka & Pratik",
             days: "Days",
             hours: "Hours",
