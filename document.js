@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
             timeline: [
                 { title: "साखरपुडा समारंभ", date: "१८ एप्रिल २०२५", time: "१२:०० PM", location: "मु. पो. पिरकोन-आवरे, ता. उरण, जि. रायगड", address: "" },
                 { title: "हळदी समारंभ", date: "२० एप्रिल २०२५", time: "५:०० PM", location: "मु. पो. पिरकोन-आवरे, ता. उरण, जि. रायगड", address: "" },
-                { title: "लग्न समारंभ", date: "२१ एप्रिल २०२५", time: "१२:३७ PM", location: "मोरया बँक्वेट A/C हॉल", address: "खोपटा कॉन्टिनेंटल बस स्टॉप जवळ, खोपटा ब्रिज जवळ, उरण, नवी मुंबई, महाराष्ट्र ४१०२०६" },
+                { title: "लग्न समारंभ", date: "२१ एप्रिल २०२५", time: "१२:३७ PM", location: "मोरया बँक्वेट हॉल", address: "खोपटा कॉन्टिनेंटल बस स्टॉप जवळ, खोपटा ब्रिज जवळ, उरण, नवी मुंबई, महाराष्ट्र ४१०२०६" },
                 { title: "स्वागत समारंभ आणि स्नेह भोजन", date: "२१ एप्रिल २०२५", time: "१:०० - ३:०० PM", location: "मोरया बँक्वेट A/C हॉल", address: "" }
             ],
             labels: { date: "तारीख", time: "वेळ", location: "स्थळ", address: "पत्ता" }
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
             timeline: [
                 { title: "Engagement Ceremony", date: "18 April 2025", time: "12:00 PM", location: "Pirakon-Aware, Uran, Raigad District", address: "" },
                 { title: "Haldi Ceremony", date: "20 April 2025", time: "5:00 PM", location: "Pirakon-Aware, Uran, Raigad District", address: "" },
-                { title: "Wedding Ceremony", date: "21 April 2025", time: "12:37 PM", location: "Morya Banquet A/C Hall", address: "Near Khopta Continental Bus Stop, Near Khopta Bridge, Uran, Navi Mumbai, Maharashtra 410206" },
+                { title: "Wedding Ceremony", date: "21 April 2025", time: "12:37 PM", location: "Morya Banquet Hall", address: "Near Khopta Continental Bus Stop, Near Khopta Bridge, Uran, Navi Mumbai, Maharashtra 410206" },
                 { title: "Reception", date: "21 April 2025", time: "1:00 - 3:00 PM", location: "Morya Banquet A/C Hall", address: "" }
             ],
             labels: { date: "Date", time: "Time", location: "Venue", address: "Address" }
